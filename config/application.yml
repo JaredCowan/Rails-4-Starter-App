@@ -1,0 +1,97 @@
+# Application settings available as Rails.application.config.settings
+#
+# All values in this file are namespaced under Rails.application.config.settings
+# and will not conflict with other configuration values in Rails.application.config.
+# Settings are manually applied to the correct config var as needed in specific initializers.
+# e.g. config/initializers/devise.rb
+
+common: &common
+  # Downcased and trimmed app name for namespaces.
+  # Safest to start with a letter rather than a number.
+  # See locales/en.yml for setting your app's user facing brand name.
+  app_name: 'defaultapp'
+
+  # Place social links for you or your company here
+  social:
+    facebook: 'https://www.facebook.com/'
+    twitter: 'https://twitter.com/'
+    google_plus: 'https://plus.google.com/'
+    linkedin: 'http://www.linkedin.com/'
+
+  contact:
+    email: 'email@example.com'
+    phone: '555-555-5555'
+
+  session:
+    key: '_defaultapp_session'
+    expire_after: <%= 3.days %>
+
+  rack:
+    # Timeout request after 20 seconds
+    timeout: 20
+
+  mail:
+    layout: 'emails/email'
+    from: 'defaultapp@example.com'
+
+
+# Default ENV vars.
+# Set to development values for convenience and override in production by setting ENV on the server.
+# As a best practice, do not put production values in this file for security reasons.
+default_env: &default_env
+  # From address to use when sending email
+  MAIL_HOST: 'localhost:3000'
+
+  # Host used to determine direct requests vs CDN.
+  # See RobotsController.
+  CANONICAL_HOST: 'rails4-defaultapp.herokuapp.com'
+
+  AUTH_FACEBOOK_KEY: ENV['AUTH_FACEBOOK_KEY']
+  AUTH_FACEBOOK_SECRET: ENV['AUTH_FACEBOOK_SECRET']
+  AUTH_TWITTER_KEY: ENV['AUTH_TWITTER_KEY']
+  AUTH_TWITTER_SECRET: ENV['AUTH_TWITTER_SECRET']
+  AUTH_GITHUB_KEY: ENV['AUTH_GITHUB_KEY']
+  AUTH_GITHUB_SECRET: ENV['AUTH_GITHUB_SECRET']
+  AUTH_LINKEDIN_KEY: ENV['AUTH_LINKEDIN_KEY']
+  AUTH_LINKEDIN_SECRET: ENV['AUTH_LINKEDIN_SECRET']
+
+  # Devise password encryption keys.
+  # Changing the keys will invalidate user passwords,
+  # forcing users to use the forgot password feature.
+  # TODO: make new keys with `rake secret`
+  DEVISE_SECRET_KEY: ENV['DEVISE_SECRET_KEY']
+  DEVISE_PEPPER: ENV['DEVISE_PEPPER']
+
+  # Signed cookie encryption key.
+  # TODO: make new key with `rake secret`
+  SECRET_KEY_BASE: ENV['SECRET_KEY_BASE']
+
+  # Redis server used by Sidekiq, cache, etc.
+  REDIS_URL: 'redis://localhost:6379/0'
+
+  # Airbrake/Errbit configuration
+  AIRBRAKE_API_KEY: ''
+  AIRBRAKE_HOST: ''
+
+
+development:
+  <<: *common
+  env:
+    <<: *default_env
+    ALLOW_EMAIL_PREVIEW: true
+
+test:
+  <<: *common
+  env:
+    <<: *default_env
+
+staging:
+  <<: *common
+  env:
+    <<: *default_env
+
+production:
+  <<: *common
+  env:
+    # Set dummy key so rake assets:precompile succeeds
+    DEVISE_SECRET_KEY: ''
