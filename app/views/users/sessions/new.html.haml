@@ -11,8 +11,6 @@
     %span or
 
   = simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
-    - if devise_mapping.rememberable?
-      = f.input :remember_me, as: :hidden, input_html: {value: true}
     = f.input :email, autofocus: true, required: true
 
     %div{class: resource.email.blank? ? 'collapse fade' : ''}
@@ -20,6 +18,8 @@
         - if devise_mapping.recoverable?
           = link_to I18n.t('auth.forgot.prompt'), new_password_path(resource_name), class: 'pull-right small'
         = f.input_field :password, required: true, autocomplete: 'off'
+      - if devise_mapping.rememberable?
+        = f.input :remember_me, as: :boolean, boolean_style: :inline, input_html: {value: true}
       = f.button :submit, I18n.t('auth.login.link'), class: 'btn-primary'
 
   = render 'users/shared/links', disable_signup: true

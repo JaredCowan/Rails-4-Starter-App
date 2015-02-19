@@ -17,6 +17,7 @@
           %ul.dropdown-menu
             - if current_user.is_admin?
               %li= link_to I18n.t('admin.link'), rails_admin_path, data: {"no-turbolink" => true}
+            %li= link_to I18n.t('account.profile.link'), profile_page_path(current_user.username)
             %li= link_to I18n.t('account.edit.link'), edit_user_registration_path
             %li= link_to I18n.t('auth.logout.link'), destroy_user_session_path, rel: :nofollow
       - unless user_signed_in?

@@ -11,11 +11,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  after_create :send_welcome_emails
+  before_save { self.username = self.username.gsub(/[^a-z]/i, '') }
+  validates :username, presence: true, 
+            length: { minimum: 3, maximum: 20 },
+            uniqueness: { case_sensitive: false }
 
-  # def to_param
-  #   first_name
-  # end
+  after_create :send_welcome_emails
 
   def display_name
     first_name.presence || email.split('@')[0]
@@ -29,6 +30,10 @@ class User < ActiveRecord::Base
     find_by(email: email.downcase)
     # Use ILIKE if using PostgreSQL and Devise.config.case_insensitive_keys=[]
     #where('email ILIKE ?', email).first
+  end
+
+  def self.find_by_username(username)
+    find_by(username: username.downcase)
   end
 
   # Override Devise to allow for Authentication or password.

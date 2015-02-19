@@ -3,6 +3,7 @@
 
 = simple_form_for resource, as: resource_name, url: registration_path(resource_name) do |f|
   = f.input :email, autofocus: true, required: true
+  = f.input :username, required: true
 
   - if show_all or resource.try(:first_name).present? or resource.try(:last_name).present?
     = f.input :first_name
