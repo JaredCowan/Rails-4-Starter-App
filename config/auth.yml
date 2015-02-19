@@ -48,7 +48,7 @@ defaults: &defaults
 
     linkedin:
       name: LinkedIn
-      logout: 'https://www.linkedin.com'
+      logout: 'https://www.linkedin.com/logout'
       key: <%= ENV['AUTH_LINKEDIN_KEY'] %>
       secret: <%= ENV['AUTH_LINKEDIN_SECRET'] %>
     #
