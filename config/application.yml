@@ -27,7 +27,6 @@ common: &common
     expire_after: <%= 3.days %>
 
   rack:
-    # Timeout request after 20 seconds
     timeout: 20
 
   mail:
