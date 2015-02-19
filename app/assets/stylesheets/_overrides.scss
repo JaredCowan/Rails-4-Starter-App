@@ -1,0 +1,21 @@
+//
+// Minor Tweaks
+//
+
+// Padding to clear fixed nav
+body {
+  padding-top: 70px;
+}
+
+// Make sure alerts are nicely formatted
+.alert {
+  a {
+    white-space: nowrap;
+  }
+}
+
+// Postion loading spinner at bottom right
+#nprogress .spinner {
+  top: auto;
+  bottom: 15px;
+}

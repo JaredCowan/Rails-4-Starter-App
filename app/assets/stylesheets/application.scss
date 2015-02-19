@@ -1,7 +1,7 @@
-//
-// Prefer imports over require
-// http://pivotallabs.com/structure-your-sass-files-with-import/
-//
+/* 
+ * ProjectName v1.0.0 * 
+ * Changed: Wednesday, February 18th, 2015, at 3:51:35 PM * 
+*/ 
 
 //= require_self
 
@@ -19,26 +19,9 @@
 @import 'nprogress';
 @import 'nprogress-bootstrap';
 
+// Overrides
+@import "overrides";
 
 
-//
-// Minor Tweaks
-//
 
-// Padding to clear fixed nav
-body {
-  padding-top: 70px;
-}
 
-// Make sure alerts are nicely formatted
-.alert {
-  a {
-    white-space: nowrap;
-  }
-}
-
-// Postion loading spinner at bottom right
-#nprogress .spinner {
-  bottom: 15px;
-  top: auto;
-}

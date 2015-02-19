@@ -1,14 +1,15 @@
 // Page footer
 
 .page__footer {
-  margin-top: 100px;
   padding: 20px 10px;
-  border-top: 1px solid $gray-lighter;
+  margin-top: 100px;
   text-align: center;
+  border-top: 1px solid $gray-lighter;
 
   ul {
-    @extend .list-unstyled;
     margin: 0;
+
+    @extend .list-unstyled;
   }
   li {
     display: inline-block;

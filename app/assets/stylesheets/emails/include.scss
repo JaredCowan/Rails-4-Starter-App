@@ -31,7 +31,6 @@ h6 a:visited {
   color: #2ba6cb !important;
 }
 
-
 table.button:hover td,
 table.button:visited td,
 table.button:active td {
@@ -67,12 +66,12 @@ table.medium-button td a:visited,
 table.large-button:hover td a,
 table.large-button:active td a,
 table.large-button td a:visited {
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
 table.secondary:hover td {
-  background: #d0d0d0 !important;
   color: #555;
+  background: #d0d0d0 !important;
 }
 
 table.secondary:hover td a,
@@ -96,14 +95,12 @@ table.twitter:hover td {
   background: #0087bb !important;
 }
 table.google-plus:hover td {
-  background: #CC0000 !important;
+  background: #c00 !important;
 }
-
 
 /*  Media Queries */
 
 @media only screen and (max-width: 600px) {
-
   table[class="body"] img {
     width: auto !important;
     height: auto !important;
@@ -118,8 +115,8 @@ table.google-plus:hover td {
   }
 
   table[class="body"] .row {
-    width: 100% !important;
     display: block !important;
+    width: 100% !important;
   }
 
   table[class="body"] .wrapper {
@@ -129,12 +126,12 @@ table.google-plus:hover td {
 
   table[class="body"] .columns,
   table[class="body"] .column {
-    table-layout: fixed !important;
+    display: block !important;
     float: none !important;
     width: 100% !important;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-    display: block !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    table-layout: fixed !important;
   }
 
   table[class="body"] .wrapper.first .columns,
@@ -148,29 +145,53 @@ table.google-plus:hover td {
   }
 
   table[class="body"] .columns td.one,
-  table[class="body"] .column td.one { width: 8.333333% !important; }
+  table[class="body"] .column td.one {
+    width: 8.333333% !important;
+  }
   table[class="body"] .columns td.two,
-  table[class="body"] .column td.two { width: 16.666666% !important; }
+  table[class="body"] .column td.two {
+    width: 16.666666% !important;
+  }
   table[class="body"] .columns td.three,
-  table[class="body"] .column td.three { width: 25% !important; }
+  table[class="body"] .column td.three {
+    width: 25% !important;
+  }
   table[class="body"] .columns td.four,
-  table[class="body"] .column td.four { width: 33.333333% !important; }
+  table[class="body"] .column td.four {
+    width: 33.333333% !important;
+  }
   table[class="body"] .columns td.five,
-  table[class="body"] .column td.five { width: 41.666666% !important; }
+  table[class="body"] .column td.five {
+    width: 41.666666% !important;
+  }
   table[class="body"] .columns td.six,
-  table[class="body"] .column td.six { width: 50% !important; }
+  table[class="body"] .column td.six {
+    width: 50% !important;
+  }
   table[class="body"] .columns td.seven,
-  table[class="body"] .column td.seven { width: 58.333333% !important; }
+  table[class="body"] .column td.seven {
+    width: 58.333333% !important;
+  }
   table[class="body"] .columns td.eight,
-  table[class="body"] .column td.eight { width: 66.666666% !important; }
+  table[class="body"] .column td.eight {
+    width: 66.666666% !important;
+  }
   table[class="body"] .columns td.nine,
-  table[class="body"] .column td.nine { width: 75% !important; }
+  table[class="body"] .column td.nine {
+    width: 75% !important;
+  }
   table[class="body"] .columns td.ten,
-  table[class="body"] .column td.ten { width: 83.333333% !important; }
+  table[class="body"] .column td.ten {
+    width: 83.333333% !important;
+  }
   table[class="body"] .columns td.eleven,
-  table[class="body"] .column td.eleven { width: 91.666666% !important; }
+  table[class="body"] .column td.eleven {
+    width: 91.666666% !important;
+  }
   table[class="body"] .columns td.twelve,
-  table[class="body"] .column td.twelve { width: 100% !important; }
+  table[class="body"] .column td.twelve {
+    width: 100% !important;
+  }
 
   table[class="body"] td.offset-by-one,
   table[class="body"] td.offset-by-two,
@@ -212,7 +233,6 @@ table.google-plus:hover td {
 }
 
 @media only screen and (max-width: 600px) {
-
   table[class="body"] .right-text-pad {
     padding-left: 10px !important;
   }
