@@ -14,14 +14,22 @@
 @import "cards";
 @import "footer";
 @import "hacks";
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+@import 'font-awesome';
+
+@font-face {
+      font-family: 'Glyphicons Halflings';
+      src: font-path('/assets/fonts/glyphicons-halflings-regular.eot');
+      src: font-path('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+font-path('/assets/fonts/glyphicons-halflings-regular.woff') format('woff'), 
+font-path('/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+font-path('/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
 
 // Plugins
 @import 'nprogress';
 @import 'nprogress-bootstrap';
 
+
 // Overrides
 @import "overrides";
-
-
-
-
