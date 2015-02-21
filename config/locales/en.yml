@@ -62,8 +62,10 @@ en:
       prompt: 'Delete your account?'
       warning: 'Your account will be permanently deleted. This cannot be undone.'
       notice: ''
-      submit: 'Yes, delete my account'
-      cancel: 'Cancel'
+      submit: 'Yes, Delete my account'
+      submit-class: 'btn btn-danger'
+      cancel: 'No, Keep my account'
+      cancel-class: 'btn btn-success'
 
   accounts:
     connected: 'Success! Your social account is now connected.'

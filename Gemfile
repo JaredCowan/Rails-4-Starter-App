@@ -53,8 +53,8 @@ gem 'coffee-rails'
 # Design
 gem "autoprefixer-rails"
 gem 'bootstrap-sass'
-gem 'draper'
 gem 'js-routes'
+gem 'draper', '~> 1.3'
 # gem 'bourbon'
 # gem 'neat'
 # gem 'country_select'

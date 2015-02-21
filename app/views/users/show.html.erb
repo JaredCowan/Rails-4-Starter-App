@@ -1,12 +1,2 @@
 <h1>User Home</h1>
-<p>
-  You are logged in.
-  <% @current_user.authentications.each do |f| %>
-    <%= image_tag(f.image_url) %>
-  <% end %>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <%= @current_user.authentications.where(provider: 'github').inspect %>
-</p>
+<p> You are logged in.</p>
