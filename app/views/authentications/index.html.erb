@@ -38,7 +38,5 @@
     </div>
   <% end %>
 </div>
+
 <%= render 'layouts/destroy_modal', id: disconnect_modal_id, i18n_prefix: 'auth.destroy' %>
-<% content_for :on_ready do %>
-  $('#authentications-index [title]').tooltip({container: 'body', placement: 'bottom'})
-<% end %>

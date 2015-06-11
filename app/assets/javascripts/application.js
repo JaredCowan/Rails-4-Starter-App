@@ -30,4 +30,6 @@ $(function() {
   $('input[name="user[email]"]').on('click keydown', function() {
     $(this).closest('form').find('.collapse').addClass('in');
   });
+
+  $('#authentications-index [title]').tooltip({container: 'body', placement: 'bottom'});
 });
