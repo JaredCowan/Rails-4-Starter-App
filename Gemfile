@@ -19,16 +19,16 @@ gem 'terminal-notifier', group: [:development]
 gem 'rack-timeout', '~> 0.1.0beta4'
 gem 'newrelic_rpm'
 gem 'airbrake', '~> 3.2.1'         # use with airbrake.io or errbit
+gem 'rack-google-analytics'
 # gem 'airbrake_user_attributes'  # use with self-hosted errbit; see config/initializers/airbrake.rb
-# gem 'rack-google-analytics'
 
 # Data
 gem 'pg'
-# gem 'mysql2'
-gem 'dalli'                     # memcached
-# gem 'schema_plus'             # add better index and foreign key support
-gem 'jbuilder'
+# gem 'mysql2'            # use mysql instead of postgresql
+gem 'dalli'               # memcached
+# gem 'schema_plus'       # add better index and foreign key support
 gem 'rake', '>=10.3.2'
+gem 'ffaker'
 
 # Assets
 gem 'sass-rails'
@@ -129,7 +129,6 @@ group :development, :test do
   # Testing
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'ffaker'
   # gem 'capybara-webkit'
   # gem 'poltergeist'           # alternative to capybara-webkit
   # gem 'capybara-firebug'
