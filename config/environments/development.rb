@@ -15,7 +15,7 @@ Rails.application.configure do
 
   # Logging
   config.log_level = :debug
-  config.logger = ActiveSupport::Logger.new(STDOUT)
+  # config.logger = ActiveSupport::Logger.new(STDOUT)
   config.colorize_logging = true
 
   # Don't care if the mailer can't send.
@@ -45,7 +45,7 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
+  config.assets.debug = false
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.

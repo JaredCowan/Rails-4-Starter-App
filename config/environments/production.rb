@@ -53,7 +53,6 @@ Rails.application.configure do
   config.logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
-  #
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"
 

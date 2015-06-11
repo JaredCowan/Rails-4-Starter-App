@@ -23,7 +23,7 @@ defaults: &defaults
       key: <%= ENV['AUTH_FACEBOOK_KEY'] %>
       secret: <%= ENV['AUTH_FACEBOOK_SECRET'] %>
       # Settings listed in oauth are included in the omniauth provider configuration
-      # See config/initializers/1_auth.rb
+      # See config/initializers/auth.rb
       oauth:
         # Common Facebook Scopes:
         # email,user_about_me,user_interests,user_activities,user_likes,user_location,user_website
