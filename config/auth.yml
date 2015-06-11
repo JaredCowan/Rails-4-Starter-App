@@ -55,8 +55,8 @@ defaults: &defaults
     google_oauth2:
       name: Google
       logout: 'https://www.google.com'
-      key: <%= ENV['AUTH_GOOGLE_KEY'] %>
-      secret: <%= ENV['AUTH_GOOGLE_SECRET'] %>
+      key: <%= ENV['GENERAL_AUTH_GOOGLE_KEY'] %>
+      secret: <%= ENV['GENERAL_AUTH_GOOGLE_SECRET'] %>
       oauth:
         access_type: offline
         approval_prompt: force
