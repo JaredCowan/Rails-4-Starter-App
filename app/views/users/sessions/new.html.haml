@@ -23,6 +23,3 @@
       = f.button :submit, I18n.t('auth.login.link'), class: 'btn-primary'
 
   = render 'users/shared/links', disable_signup: true
-
-- content_for :on_ready do
-  $('input[name="user[email]"]').on('click keydown', function(){$(this).closest('form').find('.collapse').addClass('in')});
