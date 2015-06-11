@@ -16,10 +16,7 @@
 //= require jquery_2
 //= require jquery_ujs
 //= require bootstrap
-//= require jquery.turbolinks
-//= require turbolinks
 //= require nprogress
-//= require nprogress-turbolinks
 //= require rails_confirm_dialog
 //= require jquery.scrollto
 //= require js-routes
@@ -28,18 +25,3 @@
 // See avatar.scss and _avatar.html.haml
 //= require imagesloaded
 //= require avatar.errors
-
-$(function(e) {
-
-  $("#user_username").keyup(function(e) {
-    var $this = $(this)
-    , val
-    , $username;
-
-    val = $this.val().replace(/([^a-z0-9]+)/gi, '')
-
-    $username = val.toLowerCase()
-
-    // $this.val($username);
-  });
-});
