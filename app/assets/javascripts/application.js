@@ -25,3 +25,9 @@
 // See avatar.scss and _avatar.html.haml
 //= require imagesloaded
 //= require avatar.errors
+
+$(function() {
+  $('input[name="user[email]"]').on('click keydown', function() {
+    $(this).closest('form').find('.collapse').addClass('in');
+  });
+});
