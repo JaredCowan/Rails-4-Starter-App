@@ -73,8 +73,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
 gem 'omniauth-linkedin'
+gem 'omniauth-google-oauth2'
 # gem 'omniauth-persona'
-# gem 'omniauth-google-oauth2'
 
 # Admin
 gem 'rails_admin'
